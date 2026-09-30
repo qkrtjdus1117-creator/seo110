@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* 한국어 웹 타이포그래피 최적화: 어절 단위 줄바꿈 및 가독성 개선 */
+html,
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+div {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  .print\:block {
+    display: block !important;
+  }
+}
